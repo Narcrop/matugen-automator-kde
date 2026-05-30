@@ -1,0 +1,27 @@
+[config]
+
+[templates.kde]
+input_path = '~/.config/matugen/templates/kde.colors.template'
+output_path = '~/.local/share/color-schemes/Matugen.colors'
+
+[templates.vesktop]
+input_path = '~/.config/matugen/templates/vesktop.css.template'
+output_path = '~/.config/vesktop/themes/Matugen.theme.css'
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty.conf.template'
+output_path = '~/.config/kitty/colors-matugen.conf'
+
+[templates.gtk3]
+input_path = '~/.config/matugen/templates/gtk.css.template'
+output_path = '~/.config/gtk-3.0/gtk.css'
+
+[templates.gtk4]
+input_path = '~/.config/matugen/templates/gtk.css.template'
+output_path = '~/.config/gtk-4.0/gtk.css'
+
+[templates.pywalfox]
+input_path = "~/.config/matugen/templates/pywalfox-colors.json"
+output_path = "~/.cache/wal/colors.json"
+post_hook = "pywalfox update"
+
