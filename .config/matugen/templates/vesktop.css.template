@@ -1,0 +1,128 @@
+/**
+ * @name Midnight Matugen Dynamic
+ * @description A dark, customizable discord theme powered by Matugen Material You colors.
+ * @author refact0r & Hugo
+ * @version 2.1.1
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/midnight-discord
+ * @source https://github.com/refact0r/midnight-discord/blob/master/themes/midnight.theme.css
+ */
+
+/* Importar los módulos estructurales del tema Midnight original */
+@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
+
+body {
+    /* Opciones de fuentes */
+    --font: 'figtree';
+    --code-font: '';
+    font-weight: 400;
+
+    /* Tamaños y bordes */
+    --gap: 12px;
+    --divider-thickness: 4px;
+    --border-thickness: 1px;
+
+    /* Animaciones */
+    --animations: on;
+    --list-item-transition: 0.2s ease;
+    --dms-icon-svg-transition: 0.4s ease;
+    --border-hover-transition: 0.2s ease;
+
+    /* Barra superior */
+    --top-bar-height: var(--gap);
+    --top-bar-button-position: titlebar;
+    --top-bar-title-position: off;
+    --subtle-top-bar-title: off;
+
+    /* Controles de ventana */
+    --custom-window-controls: on;
+    --window-control-size: 14px;
+
+    /* Icono de Mensajes Directos (Luna por defecto) */
+    --custom-dms-icon: custom;
+    --dms-icon-svg-url: url('https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg');
+    --dms-icon-svg-size: 90%;
+    --dms-icon-color-before: var(--text-4);
+    --dms-icon-color-after: var(--text-1);
+    --custom-dms-background: off;
+    --dms-background-image-url: url('');
+    --dms-background-image-size: cover;
+    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2));
+
+    /* Imagen de fondo (Desactivado para usar los colores planos de Matugen) */
+    --background-image: off;
+    --background-image-url: url('');
+
+    /* Ajustes de transparencia y desenfoque */
+    --transparency-tweaks: off;
+    --remove-bg-layer: off;
+    --panel-blur: off;
+    --blur-amount: 12px;
+    --bg-floating: var(--bg-3);
+
+    /* Barra de chat */
+    --custom-chatbar: off;
+    --chatbar-height: 47px;
+
+    /* Panel de usuario */
+    --small-user-panel: on;
+}
+
+/* --- RECALIBRACIÓN DE COLORES PARA MÁXIMO CONTRASTE --- */
+:root {
+    --colors: on;
+
+    /* Textos dinámicos basados en la jerarquía original */
+    --text-0: {{colors.surface_container_lowest.default.hex}};
+    --text-1: #ffffff; /* Blanco puro para nombres principales como en la muestra */
+    --text-2: {{colors.on_surface.default.hex}}; /* Encabezados importantes */
+    --text-3: {{colors.on_surface_variant.default.hex}}; /* Texto normal de chat */
+    --text-4: {{colors.outline.default.hex}}; /* Canales y botones secundarios (más apagados) */
+    --text-5: {{colors.outline_variant.default.hex}}; /* Timestamps y texto silenciado */
+
+    /* Escala de Fondos Corregida (Forzando la profundidad de capas de Midnight) */
+    --bg-4: {{colors.surface_container_lowest.default.hex}}; /* El fondo más oscuro para el chat */
+    --bg-3: {{colors.surface_container_low.default.hex}};    /* Un paso más claro para la lista de canales */
+    --bg-2: {{colors.surface_container.default.hex}};        /* Contenedores y botones */
+    --bg-1: {{colors.surface_container_high.default.hex}};   /* Paneles activos / clickeados */
+
+    /* Hovers y selección */
+    --hover: rgba(255, 255, 255, 0.03);
+    --active: {{colors.primary_container.default.hex}};
+    --active-2: rgba(255, 255, 255, 0.07);
+    --message-hover: rgba(0, 0, 0, 0.2);
+
+    /* Acentos vibrantes sincronizados */
+    --accent-1: {{colors.secondary.default.hex}};
+    --accent-2: {{colors.primary.default.hex}};
+    --accent-3: {{colors.primary.default.hex}};
+    --accent-4: {{colors.primary_container.default.hex}};
+    --accent-5: {{colors.inverse_primary.default.hex}};
+    --accent-new: {{colors.primary.default.hex}};
+
+    /* Menciones y Respuestas */
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 92%) 40%, transparent);
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent);
+    --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 92%) 40%, transparent);
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent);
+
+    /* Indicadores de Estado */
+    --online: {{colors.primary.default.hex}};
+    --dnd: {{colors.error.default.hex}};
+    --idle: {{colors.tertiary.default.hex}};
+    --streaming: {{colors.secondary.default.hex}};
+    --offline: var(--text-4);
+
+    /* Bordes dinámicos sutiles (Para imitar las líneas finas de la muestra) */
+    --border-light: rgba(255, 255, 255, 0.02);
+    --border: rgba(255, 255, 255, 0.05);
+    --border-hover: {{colors.outline.default.hex}};
+    --button-border: rgba(255, 255, 255, 0.06);
+
+    /* Paleta base de respaldo */
+    --red-1: {{colors.error.default.hex}}; --red-2: {{colors.error.default.hex}}; --red-3: {{colors.error.default.hex}}; --red-4: {{colors.error.default.hex}}; --red-5: {{colors.error.default.hex}};
+    --green-1: {{colors.primary.default.hex}}; --green-2: {{colors.primary.default.hex}}; --green-3: {{colors.primary.default.hex}}; --green-4: {{colors.primary.default.hex}}; --green-5: {{colors.primary.default.hex}};
+    --blue-1: {{colors.secondary.default.hex}}; --blue-2: {{colors.secondary.default.hex}}; --blue-3: {{colors.secondary.default.hex}}; --blue-4: {{colors.secondary.default.hex}}; --blue-5: {{colors.secondary.default.hex}};
+    --yellow-1: {{colors.tertiary.default.hex}}; --yellow-2: {{colors.tertiary.default.hex}}; --yellow-3: {{colors.tertiary.default.hex}}; --yellow-4: {{colors.tertiary.default.hex}}; --yellow-5: {{colors.tertiary.default.hex}};
+    --purple-1: {{colors.secondary.default.hex}}; --purple-2: {{colors.secondary.default.hex}}; --purple-3: {{colors.secondary.default.hex}}; --purple-4: {{colors.secondary.default.hex}}; --purple-5: {{colors.secondary.default.hex}};
+}
