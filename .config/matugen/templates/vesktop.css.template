@@ -8,37 +8,37 @@
  * @source https://github.com/refact0r/midnight-discord/blob/master/themes/midnight.theme.css
  */
 
-/* Importar los módulos estructurales del tema Midnight original */
+/* Import structural modules from the original Midnight theme */
 @import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
 
 body {
-    /* Opciones de fuentes */
+    /* Font choices */
     --font: 'figtree';
     --code-font: '';
     font-weight: 400;
 
-    /* Tamaños y bordes */
+    /* Sizes and borders */
     --gap: 12px;
     --divider-thickness: 4px;
     --border-thickness: 1px;
 
-    /* Animaciones */
+    /* Animations */
     --animations: on;
     --list-item-transition: 0.2s ease;
     --dms-icon-svg-transition: 0.4s ease;
     --border-hover-transition: 0.2s ease;
 
-    /* Barra superior */
+    /* Top bar */
     --top-bar-height: var(--gap);
     --top-bar-button-position: titlebar;
     --top-bar-title-position: off;
     --subtle-top-bar-title: off;
 
-    /* Controles de ventana */
+    /* Window controls */
     --custom-window-controls: on;
     --window-control-size: 14px;
 
-    /* Icono de Mensajes Directos (Luna por defecto) */
+    /* Direct Messages icon (Moon by default) */
     --custom-dms-icon: custom;
     --dms-icon-svg-url: url('https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg');
     --dms-icon-svg-size: 90%;
@@ -49,50 +49,50 @@ body {
     --dms-background-image-size: cover;
     --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2));
 
-    /* Imagen de fondo (Desactivado para usar los colores planos de Matugen) */
+    /* Background image (Disabled to use flat Matugen colors) */
     --background-image: off;
     --background-image-url: url('');
 
-    /* Ajustes de transparencia y desenfoque */
+    /* Transparency and blur tweaks */
     --transparency-tweaks: off;
     --remove-bg-layer: off;
     --panel-blur: off;
     --blur-amount: 12px;
     --bg-floating: var(--bg-3);
 
-    /* Barra de chat */
+    /* Chat bar */
     --custom-chatbar: off;
     --chatbar-height: 47px;
 
-    /* Panel de usuario */
+    /* User panel */
     --small-user-panel: on;
 }
 
-/* --- RECALIBRACIÓN DE COLORES PARA MÁXIMO CONTRASTE --- */
+/* --- COLOR RECALIBRATION FOR MAXIMUM CONTRAST --- */
 :root {
     --colors: on;
 
-    /* Textos dinámicos basados en la jerarquía original */
+    /* Dynamic texts based on original hierarchy */
     --text-0: {{colors.surface_container_lowest.default.hex}};
-    --text-1: #ffffff; /* Blanco puro para nombres principales como en la muestra */
-    --text-2: {{colors.on_surface.default.hex}}; /* Encabezados importantes */
-    --text-3: {{colors.on_surface_variant.default.hex}}; /* Texto normal de chat */
-    --text-4: {{colors.outline.default.hex}}; /* Canales y botones secundarios (más apagados) */
-    --text-5: {{colors.outline_variant.default.hex}}; /* Timestamps y texto silenciado */
+    --text-1: #ffffff; /* Pure white for main names as in sample */
+    --text-2: {{colors.on_surface.default.hex}}; /* Important headers */
+    --text-3: {{colors.on_surface_variant.default.hex}}; /* Normal chat text */
+    --text-4: {{colors.outline.default.hex}}; /* Channels and secondary buttons (more muted) */
+    --text-5: {{colors.outline_variant.default.hex}}; /* Timestamps and muted text */
 
-    /* Escala de Fondos Corregida (Forzando la profundidad de capas de Midnight) */
-    --bg-4: {{colors.surface_container_lowest.default.hex}}; /* El fondo más oscuro para el chat */
-    --bg-3: {{colors.surface_container_low.default.hex}};    /* Un paso más claro para la lista de canales */
-    --bg-2: {{colors.surface_container.default.hex}};        /* Contenedores y botones */
-    --bg-1: {{colors.surface_container_high.default.hex}};   /* Paneles activos / clickeados */
+    /* Corrected Background Scale (Forcing Midnight layer depth) */
+    --bg-4: {{colors.surface_container_lowest.default.hex}}; /* Darkest background for chat */
+    --bg-3: {{colors.surface_container_low.default.hex}};    /* A step lighter for the channel list */
+    --bg-2: {{colors.surface_container.default.hex}};        /* Containers and buttons */
+    --bg-1: {{colors.surface_container_high.default.hex}};   /* Active / clicked panels */
 
-    /* Hovers y selección */
+    /* Hovers and selection */
     --hover: rgba(255, 255, 255, 0.03);
     --active: {{colors.primary_container.default.hex}};
     --active-2: rgba(255, 255, 255, 0.07);
     --message-hover: rgba(0, 0, 0, 0.2);
 
-    /* Acentos vibrantes sincronizados */
+    /* Synchronized vibrant accents */
     --accent-1: {{colors.secondary.default.hex}};
     --accent-2: {{colors.primary.default.hex}};
     --accent-3: {{colors.primary.default.hex}};
@@ -100,26 +100,26 @@ body {
     --accent-5: {{colors.inverse_primary.default.hex}};
     --accent-new: {{colors.primary.default.hex}};
 
-    /* Menciones y Respuestas */
+    /* Mentions and Replies */
     --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 92%) 40%, transparent);
     --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent);
     --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 92%) 40%, transparent);
     --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent);
 
-    /* Indicadores de Estado */
+    /* Status Indicators */
     --online: {{colors.primary.default.hex}};
     --dnd: {{colors.error.default.hex}};
     --idle: {{colors.tertiary.default.hex}};
     --streaming: {{colors.secondary.default.hex}};
     --offline: var(--text-4);
 
-    /* Bordes dinámicos sutiles (Para imitar las líneas finas de la muestra) */
+    /* Subtle dynamic borders (To mimic fine lines from sample) */
     --border-light: rgba(255, 255, 255, 0.02);
     --border: rgba(255, 255, 255, 0.05);
     --border-hover: {{colors.outline.default.hex}};
     --button-border: rgba(255, 255, 255, 0.06);
 
-    /* Paleta base de respaldo */
+    /* Backup base palette */
     --red-1: {{colors.error.default.hex}}; --red-2: {{colors.error.default.hex}}; --red-3: {{colors.error.default.hex}}; --red-4: {{colors.error.default.hex}}; --red-5: {{colors.error.default.hex}};
     --green-1: {{colors.primary.default.hex}}; --green-2: {{colors.primary.default.hex}}; --green-3: {{colors.primary.default.hex}}; --green-4: {{colors.primary.default.hex}}; --green-5: {{colors.primary.default.hex}};
     --blue-1: {{colors.secondary.default.hex}}; --blue-2: {{colors.secondary.default.hex}}; --blue-3: {{colors.secondary.default.hex}}; --blue-4: {{colors.secondary.default.hex}}; --blue-5: {{colors.secondary.default.hex}};
