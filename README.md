@@ -21,6 +21,8 @@ Make sure you have the following installed:
 * [Pywalfox](https://github.com/frewacom/pywalfox)
 * [Pywalfox Add-On](https://addons.mozilla.org/en-US/firefox/addon/pywalfox/)
 * [Kitty](https://github.com/kovidgoyal/kitty)
+* [nwg-look](https://github.com/nwg-piotr/nwg-look)
+* [adw-gtk-theme](https://github.com/lassekongo83/adw-gtk3)
 * [Your wallpaper daemon like: [awww](https://codeberg.org/LGFae/awww), [hyprpaper](https://github.com/hyprwm/hyprpaper), [plasma-apply-wallpaperimage](https://kde.org/es/plasma-desktop/)]
 
 ---
@@ -57,9 +59,23 @@ chmod +x ~/.local/bin/switch_rice.sh
 # Give execution permissions to the desktop entry
 chmod +x ~/.local/share/kio/servicemenus/matugen-wallpaper.desktop
 
+# Give execution permissions to the post-hook script
+chmod +x ~/.config/matugen/post-hook-scripts/gtk-themes-reload.sh
+
 ```
 
-### 4. File Manager Integration (Right-Click Context Menu)
+### 4. Remove previous GTK configurations
+I recommend removing previous GTK configurations to avoid errors
+
+```bash
+
+rm -rf ~/.config/gtk-3.0/*
+
+rm -rf ~/.config/gtk-4.0/*
+
+```
+
+### 5. File Manager Integration (Right-Click Context Menu)
 
 Depending on your Desktop Environment or File Manager, you need to tie the script to your right-click action:
 
