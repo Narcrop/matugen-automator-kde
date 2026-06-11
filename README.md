@@ -33,7 +33,7 @@ You can easily install and set up this project by cloning the repository and mov
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/Narcrop/matugen-dots-automator.git
+git clone https://github.com/Narcrop/matugen-automator.git
 cd matugen-dots-automator
 
 ```
